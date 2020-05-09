@@ -2,11 +2,13 @@ Runes of Magic Dependencies
 
 #wine
 #lib32-libldap
+#lib32-libpulse
 #Steam Windows Installer (SteamSetup.exe)
 
 
 https://www.archlinux.org/packages/multilib/x86_64/wine/
 https://www.archlinux.org/packages/multilib/x86_64/lib32-libldap/
+https://www.archlinux.org/packages/multilib/x86_64/lib32-libpulse/
 https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe
 
 Step 1 - Enable Multilib
@@ -18,7 +20,7 @@ Include = /etc/pacman.d/mirrorlist
 
 Step 2 - Install dependencies
 
-sudo pacman -S wine lib32-libldap
+sudo pacman -S wine lib32-libldap lib32-libpulse
 
 
 Step 3 - Run winecfg and install WineMono + WineGecko + WineGecko(x86) 
@@ -34,7 +36,3 @@ Step 5 - Start Runes of Magic with Steam html Priviliges
 cd /home/ds/.wine/drive_c/Program Files (x86)/Steam/
 
 wine steam.exe steam://run/808290
-
-
-# This is base install, some sound or item shop issues is possible.
-# In Manjaro or Ubuntu wine libraries more complicate  so you can get better performance.
